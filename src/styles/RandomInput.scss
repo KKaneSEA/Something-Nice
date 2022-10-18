@@ -1,0 +1,92 @@
+@import "Body";
+
+.RandomInput {
+  height: 60%;
+  width: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  margin-left: 80px;
+  align-content: flex-start;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    flex-direction: column;
+    width: 100vh;
+    padding-top: 90px;
+    align-items: stretch;
+    margin-left: 0;
+    padding-left: 100px;
+
+    height: 100%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 90px;
+    align-items: stretch;
+    margin-left: 0;
+    padding-left: 30px;
+    height: 100%;
+  }
+}
+
+.RandomInput-Content {
+  display: grid;
+  padding-top: 12rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.RandomInput-OneLine {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+.RandomInput-Field {
+  display: flex;
+  width: 50%;
+  height: 20px;
+  margin-left: 8px;
+  padding: 0px 10px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.RandomInput-Field:focus {
+  color: black;
+  background-color: peachpuff;
+  outline: none;
+
+  border-width: 1px;
+  border-color: peachpuff;
+  border-style: solid;
+}
+.RandomInput-Hidden {
+  opacity: 0;
+  background-color: green;
+}
+
+.RandomInput-Button {
+  margin-bottom: 10px;
+  background-color: rgb(163, 192, 57);
+  font-size: 18px;
+  padding: 10px 10px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  margin-right: 20px;
+}
+
+.RandomInput-Button:focus {
+  outline: none;
+  background-color: lightsalmon;
+}
