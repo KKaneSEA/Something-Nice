@@ -12,9 +12,6 @@ import "./styles/FriendMain.scss";
 export default class FriendMain extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   listedCompliments: [],
-    // };
   }
   render() {
     const names = this.props.friendState;
@@ -31,18 +28,27 @@ export default class FriendMain extends Component {
 
     console.log(allItems);
 
-    let niceCompliments = allItems.map((n) => <h1 key={n}>{n}</h1>);
+    let niceCompliments = allItems.map((n) => (
+      <h1 className="friendMain-compliments" key={n}>
+        {n}
+      </h1>
+    ));
 
     let nameHeading = requiredItem.map((n) => (
-      <h1 className="friendMain-compliments" key={n.friendName}>
+      <h1 className="friendMain-heading" key={n.id}>
         {n.friendName}
       </h1>
     ));
 
-    return (
-      <div>
+    return niceCompliments.length > 0 ? (
+      <div className="friendMain-container">
         {nameHeading}
         {niceCompliments}
+      </div>
+    ) : (
+      <div className="friendMain-container">
+        {nameHeading}{" "}
+        <h1 className="friendMain-compliments">waiting on some prompts!</h1>
       </div>
     );
   }

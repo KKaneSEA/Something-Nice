@@ -47,7 +47,7 @@ export default class Sidebar extends Component {
     this.state = {
       friendName: "",
       id: uuidv4(),
-      compliments: ["oh", "dkjds"],
+      compliments: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

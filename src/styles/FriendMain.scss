@@ -1,4 +1,20 @@
+@import "Body";
+
+.friendMain-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding-top: 2rem;
+  }
+}
+
+.friendMain-heading {
+  font-size: 20pt;
+  padding: 2rem 0;
+}
+
 .friendMain-compliments {
-  // padding: 2rem;
-  // margin-right: 30px;
+  padding: 0.7rem;
 }

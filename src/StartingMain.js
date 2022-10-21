@@ -15,13 +15,6 @@ export default class StartingMain extends Component {
     // this.addTesters = this.addTesters.bind(this);
   }
 
-  // stateLine = "";
-  // stateId = "";
-
-  // handleTestParam(name, line) {
-  //   this.props.testParam(name, line);
-  // }
-
   changeTitle = () => {
     this.setState({ oneLine: "" });
     document.getElementById("StartingMain-Input").value = "";
@@ -90,7 +83,7 @@ export default class StartingMain extends Component {
 
   render() {
     const names = this.props.friendState;
-    // let stateLine;
+
     let stateLine = [];
 
     let prompts = ["is so good at", "knows how to", "is great at"];
@@ -120,7 +113,7 @@ export default class StartingMain extends Component {
     function handleSubmit() {
       let input = document.getElementById("StartingMain-Input").value;
       let oneLine = `${somethingNice} ${input}`;
-      // let stateLine = oneLine;
+
       stateLine.push(oneLine);
       let stateId = getName.id;
 
@@ -142,13 +135,11 @@ export default class StartingMain extends Component {
                 id="StartingMain-Input"
                 name="complimentLine"
                 className="RandomInput-Field"
-                // onChange={this.handleInputChange}
               ></input>
             </div>
             <div className="MainArea-Buttons">
               <div className="Button-Refresh">
                 <button
-                  // className="RandomInput-Button Metal"
                   className="button-2"
                   onClick={handleRefresh}
                   onClick={this.changeTitle}
@@ -166,16 +157,7 @@ export default class StartingMain extends Component {
 
                     this.props.testParam(getName.id, stateLine[0]);
                   }}
-                  // onClick={this.handleTestParam.bind(
-                  //   this,
-                  //   getName.friendName,
-                  //   stateLine
-                  // )}
                 >
-                  {/* //   onClick={setTimeout(function () {
-                //     <NavLink to="/" />;
-                //   }, 20000)}
-                // > */}
                   Submit
                 </button>
               </NavLink>
