@@ -117,11 +117,14 @@ export default class StartingMain extends Component {
       stateLine.push(oneLine);
       let stateId = getName.id;
 
-      if (input.length > 1) console.log(oneLine);
-      else alert("Input must be at least two characters.");
-      console.log(`${getName.id} ${getName.friendName}`);
+      // if (input.length > 1) console.log(oneLine);
+      // else alert("Input must be at least two characters.");
 
       document.getElementById("StartingMain-Input").value = "";
+    }
+
+    function handleAlert() {
+      alert("Input must be at least two characters.");
     }
 
     return (
@@ -151,11 +154,18 @@ export default class StartingMain extends Component {
                 <button
                   className="button-2"
                   onClick={(e) => {
-                    handleSubmit();
+                    if (
+                      document.getElementById("StartingMain-Input").value
+                        .length > 1
+                    ) {
+                      handleSubmit();
 
-                    this.changeTitle();
+                      this.changeTitle();
 
-                    this.props.testParam(getName.id, stateLine[0]);
+                      this.props.testParam(getName.id, stateLine[0]);
+                    } else {
+                      handleAlert();
+                    }
                   }}
                 >
                   Submit
