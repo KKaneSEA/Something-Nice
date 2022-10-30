@@ -7,14 +7,23 @@
 
   @media only screen and (max-width: $bp-medium) {
     padding-top: 2rem;
+    width: 100%;
+    min-height: 100%;
   }
 }
 
 .friendMain-heading {
   font-size: 20pt;
   padding: 2rem 0;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 16pt;
+  }
 }
 
 .friendMain-compliments {
   padding: 0.7rem;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 10pt;
+    padding: 0.1rem;
+  }
 }
