@@ -122,11 +122,12 @@ h1 {
 
 .Sidebar-Input {
   padding: 6px;
+  padding-right: 5px;
   background-color: #fede8a;
   border-width: 2px;
   height: 10px;
   width: 62%;
-  margin-right: 5px;
+  // margin-right: 5px;
   border-style: solid 2px;
   border-color: black;
   border-radius: 5px;
@@ -167,7 +168,7 @@ h1 {
   // padding-bottom: 2rem;
   display: flex;
   flex-direction: row;
-
+  padding: 0 1rem;
   align-items: center;
   justify-content: center;
 

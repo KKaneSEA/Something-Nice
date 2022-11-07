@@ -13,8 +13,15 @@
 }
 
 .friendMain-heading {
-  font-size: 20pt;
-  padding: 2rem 0;
+  font-size: 22pt;
+  padding: 1rem 0;
+  text-decoration: underline;
+  animation-name: fontChange;
+  animation-duration: 1s;
+
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
   @media only screen and (max-width: $bp-medium) {
     font-size: 16pt;
   }
@@ -22,8 +29,19 @@
 
 .friendMain-compliments {
   padding: 0.7rem;
+  color: $warmblack;
+
   @media only screen and (max-width: $bp-medium) {
     font-size: 10pt;
     padding: 0.1rem;
+  }
+}
+
+@keyframes fontChange {
+  from {
+    color: green;
+  }
+  to {
+    color: $sunny2;
   }
 }

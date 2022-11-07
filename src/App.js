@@ -13,26 +13,12 @@ import FriendMain from "./FriendMain";
 
 import { v4 as uuidv4 } from "uuid";
 
-// function App()
 class App extends Component {
   constructor(props) {
     super(props);
     const savedState = JSON.parse(window.localStorage.getItem("friends"));
     this.state = {
-      friends:
-        savedState ||
-        [
-          // {
-          //   friendName: "Al",
-          //   id: uuidv4(),
-          //   compliments: ["oh", "dkjds"],
-          // },
-          // {
-          //   friendName: "True",
-          //   id: uuidv4(),
-          //   compliments: ["dhhd", "dhhsdh"],
-          // },
-        ],
+      friends: savedState || [],
     };
     this.addFriend = this.addFriend.bind(this);
     this.testParam = this.testParam.bind(this);

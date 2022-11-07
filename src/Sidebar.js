@@ -39,8 +39,6 @@ function Model({ ...props }) {
   );
 }
 
-// useGLTF.preload("/text-3d-texture2.glb");
-
 export default class Sidebar extends Component {
   constructor(props) {
     super(props);
@@ -128,26 +126,11 @@ export default class Sidebar extends Component {
                 {this.props.friendState.length > 0 ? (
                   <FriendsDropDown friendList={this.props.friendState} />
                 ) : (
-                  // <Friends friendList={this.props.friendState} />
                   <h1 className="AddFriends-Text">Add some friends!</h1>
                 )}
               </div>
 
-              <div>
-                {/* <select name="cars" id="cars" onChange={this.handleOption}>
-                  {this.props.friendState.map((n) => (
-               
-                    <option
-                      key={n.id}
-                      value={n.friendName}>
-                      {n.friendName}
-                    </option>
-                
-                  ))} */}
-                {/* <FriendsDropDown friendList={this.props.friendState} /> */}
-
-                {/* </select> */}
-              </div>
+              <div></div>
             </div>
           </div>
         </div>

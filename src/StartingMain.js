@@ -9,10 +9,6 @@ export default class StartingMain extends Component {
   constructor(props) {
     super(props);
     this.state = { complimentLine: "" };
-    // this.handleInputChange = this.handleInputChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleTestParam = this.handleTestParam.bind(this);
-    // this.addTesters = this.addTesters.bind(this);
   }
 
   changeTitle = () => {
@@ -30,63 +26,34 @@ export default class StartingMain extends Component {
     });
   }
 
-  // handleCompliment() {
-  //   this.props.testParam(this.state);
-  // }
-
-  // sendCompliment() {
-  //   this.setState({ idState: stateId, complimentLine: stateLine });
-  //   console.log(this.state.idState);
-  // }
-
-  // handleSubmit() {
-  //   let input = document.getElementById("StartingMain-Input").value;
-  //   let oneLine = `${somethingNice} ${input}`;
-  //   console.log(oneLine);
-
-  //   // if (input.length > 1) niceOneLine.push(oneLine);
-  //   // else alert("Input must be at least two characters.");
-  //   // console.log(niceOneLine);
-  //   // // this.setState({ friendNames: friendNames });
-  //   // document.getElementById("StartingMain-Input").value = "";
-  // }
-
-  //outside render
-
-  // names = this.props.friendState;
-  // stateLine = "";
-  // prompts = ["is so good at", "knows how to", "is great at"];
-
-  // randomItem(items) {
-  //   return items[Math.floor(Math.random() * items.length)];
-  // }
-
-  // getName = randomItem(names);
-  // getPrompts = randomItem(prompts);
-
-  // name2 = getName.id;
-
-  // somethingNice = `${getName.friendName} ${getPrompts}`;
-
-  // handleSubmit() {
-  //   let input = document.getElementById("StartingMain-Input").value;
-  //   let oneLine = `${somethingNice} ${input}`;
-  //   stateLine = oneLine;
-
-  //   if (input.length > 1) console.log(oneLine);
-  //   else alert("Input must be at least two characters.");
-  //   console.log(`${getName.id} ${getName.friendName}`);
-  //   this.props.testParam(`${getName.friendName}, ${oneLine} `);
-
-  //   document.getElementById("StartingMain-Input").value = "";
-  // }
-
   render() {
     const names = this.props.friendState;
 
     let stateLine = [];
 
-    let prompts = ["is so good at", "knows how to", "is great at"];
+    let prompts = [
+      "is so good at",
+
+      "has the best",
+      "is great at",
+      "is a strong",
+      "glows when they are",
+      "makes everyones day by",
+      "has taught me how to",
+      "has great ideas for",
+      "could show anyone how to",
+      "has many skills when it comes to",
+      "has a gift for",
+      "has a refreshing perspective on",
+      "is an awesome",
+      "makes everyone feel",
+      "is one of a kind at",
+      "has a rare ability to",
+      "brings joy to people by",
+      "has a great eye for",
+      "is a fantastic teammate when it comes to",
+      "supports others by",
+    ];
 
     function randomItem(items) {
       return items[Math.floor(Math.random() * items.length)];
@@ -116,9 +83,6 @@ export default class StartingMain extends Component {
 
       stateLine.push(oneLine);
       let stateId = getName.id;
-
-      // if (input.length > 1) console.log(oneLine);
-      // else alert("Input must be at least two characters.");
 
       document.getElementById("StartingMain-Input").value = "";
     }
