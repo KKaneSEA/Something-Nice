@@ -96,7 +96,7 @@ export default class Sidebar extends Component {
           <div className="Sidebar-Home">
             <NavLink to="/">
               {" "}
-              <button className="button-56">Random Prompt</button>{" "}
+              <button className="buttonPrompt">Random Prompt</button>{" "}
             </NavLink>
           </div>
           <div className="Sidebar-Add-Container">
@@ -113,7 +113,7 @@ export default class Sidebar extends Component {
               className="Sidebar-Input-Button"
               onClick={this.handleSubmit}
             >
-              +
+              Submit
             </button>
           </div>
 
