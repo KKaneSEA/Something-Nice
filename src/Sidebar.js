@@ -94,7 +94,7 @@ export default class Sidebar extends Component {
 
         <div className="Siderbar-Container">
           <div className="Sidebar-Home">
-            <NavLink to="/">
+            <NavLink to="/" className="buttonPromptLink">
               {" "}
               <button className="buttonPrompt">Random Prompt</button>{" "}
             </NavLink>
