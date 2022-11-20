@@ -31,33 +31,43 @@
 }
 
 .button-2 {
-  align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter, sans-serif;
-  font-size: 10px;
-  height: 22px;
-  width: 22px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 80%;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  z-index: 100;
+  // align-items: center;
+  // background-color: #fee6e3;
+  // border: 2px solid #111;
+  // border-radius: 8px;
+  // box-sizing: border-box;
+  // color: #111;
+  // cursor: pointer;
+  // display: flex;
+  // font-family: Inter, sans-serif;
+  // font-size: 10px;
+  // height: 22px;
+  // width: 22px;
+  // justify-content: center;
+  // line-height: 24px;
+  // max-width: 80%;
+  // padding: 0 25px;
+  // position: relative;
+  // text-align: center;
+  // text-decoration: none;
+  // user-select: none;
+  // -webkit-user-select: none;
+  // touch-action: manipulation;
+  // z-index: 100;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  padding: 1rem;
+  // margin-left: 1rem;
+  background-color: $blue1;
+  color: $warmwhite;
+  border: none;
+  font-size: 10pt;
+
+  border-radius: 3%;
 }
 
 .button-2:hover {
-  background-color: #fff;
+  // background-color: #fff;
 }
 .Button-Refresh {
   padding-right: 10px;

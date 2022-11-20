@@ -44,6 +44,9 @@
 }
 
 .RandomInput-OneLine {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -53,20 +56,20 @@
 .RandomInput-Field {
   display: flex;
   width: 50%;
-  height: 20px;
+  // height: 20px;
   margin-left: 8px;
   padding: 0px 10px;
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
 .RandomInput-Field:focus {
   color: black;
-  background-color: peachpuff;
+  background-color: $greybackground;
   outline: none;
 
   border-width: 1px;
-  border-color: peachpuff;
+  border-color: $greytext;
   border-style: solid;
 }
 .RandomInput-Hidden {
