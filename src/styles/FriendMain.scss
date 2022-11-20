@@ -19,6 +19,8 @@
   font-size: 20pt;
   padding: 2rem 0;
   color: $warmblack;
+  align-self: flex-start;
+  margin-left: 30rem;
   // text-decoration: underline;
   // animation-name: fontChange;
   // animation-duration: 1s;
@@ -33,8 +35,12 @@
 
 .friendMain-compliments {
   font-family: "Open Sans", sans-serif;
+  font-size: 16pt;
+  display: flex;
+  align-self: flex-start;
+  margin-left: 30rem;
   font-weight: 500;
-  font-size: 20pt;
+
   padding: 0.2rem;
   color: $warmblack;
 
