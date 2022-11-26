@@ -57,6 +57,7 @@
     align-items: center;
     align-self: center;
     height: 100%;
+    width: 20%;
   }
 }
 
@@ -102,13 +103,35 @@ h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
 
-  padding-left: 1rem;
+  padding-left: 5rem;
   padding-bottom: 1rem;
 
   @media only screen and (max-width: $bp-medium) {
-    font-size: 16px;
+    font-size: 10px;
     padding-left: 0;
-    font-weight: 500;
+    font-weight: 200;
+    padding-top: 1rem;
+    width: 100%;
+  }
+}
+
+.AddFriends-Text {
+  display: flex;
+  color: $blue1;
+  justify-content: center;
+  align-content: center;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+
+  // padding-left: 0.5rem;
+  padding-bottom: 1rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 8px;
+    color: $blue1;
+    padding-left: 0;
+    font-weight: 200;
     padding-top: 1rem;
   }
 }
@@ -144,7 +167,7 @@ h1 {
   padding: 1rem;
 
   background-color: $greybackground;
-  color: $greytext;
+  color: $warmblack;
   font-size: 10pt;
   height: 40%;
 
@@ -173,6 +196,10 @@ h1 {
   }
 }
 
+.Sidebar-Input::placeholder {
+  color: $warmblack;
+  opacity: 1; /* Firefox */
+}
 .Sidebar-Input:focus {
   color: $warmblack;
 
@@ -206,6 +233,11 @@ h1 {
   }
 }
 
+.Sidebar-Input-Button:hover {
+  background-color: $warmgreen;
+  color: $warmblack;
+}
+
 .Sidebar-Add-Container {
   padding-top: 2rem;
 
@@ -220,10 +252,11 @@ h1 {
     display: flex;
     padding: 0;
 
-    width: 100%;
+    width: 70%;
 
     justify-content: center;
     align-items: center;
+    align-self: center;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -232,6 +265,7 @@ h1 {
     padding: 0;
     justify-content: center;
     align-items: center;
+    align-self: center;
   }
 }
 
@@ -273,7 +307,7 @@ h1 {
     flex-direction: column;
     height: 100%;
 
-    padding-top: 1rem;
+    padding-top: 0;
 
     align-self: center;
   }
@@ -284,13 +318,19 @@ h1 {
   align-self: center;
   height: 100%;
   align-items: flex-start;
+  // justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    justify-content: center;
+    align-self: center;
+  }
 }
 .AddFriends-Text {
   color: black;
 
   @media only screen and (max-width: $bp-medium) {
     display: flex;
-    font-size: 16px;
+    font-size: 12px;
     align-items: center;
     justify-content: center;
   }
@@ -374,11 +414,38 @@ h1 {
   font-weight: 500;
   border: none;
 
+  @media only screen and (max-width: $bp-extraLarge) {
+    font-size: 10px;
+    // font-weight: 500;
+
+    padding: 0 58px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    display: block;
+    text-align: center;
+    border-radius: 2%;
+  }
+
   @media only screen and (max-width: $bp-large) {
+    font-size: 10px;
+
+    padding: 0 38px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    display: block;
+    text-align: center;
+    border-radius: 2%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
     font-size: 12px;
     font-weight: 500;
 
-    padding: 0 270px;
+    padding: 0 230px;
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -402,51 +469,10 @@ h1 {
   }
 }
 
-.button-56 {
-  align-items: center;
-  background-color: #deec83;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-weight: 900;
-  height: 38px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  z-index: 100;
-
-  @media only screen and (max-width: $bp-large) {
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 12px;
-    max-width: 80%;
-  }
-  @media only screen and (max-width: $bp-small) {
-    font-size: 10px;
-    font-weight: 900;
-    line-height: 12px;
-    max-width: 80%;
-  }
+.buttonPrompt:hover {
+  background-color: $warmgreen;
+  color: $warmblack;
 }
-
-.button-56:hover {
-  height: 38px;
-  background-color: #f0fb9d;
-}
-
-//test
 
 /* Dropdown Button */
 .dropbtn {
@@ -496,6 +522,12 @@ h1 {
   z-index: 1;
   border-radius: 10%;
   align-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 2rem;
+  }
 }
 
 /* Links inside the dropdown */
@@ -509,6 +541,13 @@ h1 {
   justify-self: center;
 
   align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5px 5px;
+    font-size: 10px;
+  }
 }
 
 /* Change color of dropdown links on hover */

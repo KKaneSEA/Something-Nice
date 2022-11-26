@@ -13,6 +13,7 @@
     align-content: center;
     width: 100%;
     min-height: 100%;
+    padding-left: 5rem;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -21,6 +22,7 @@
     align-content: center;
     width: 100%;
     min-height: 100%;
+    padding-left: 1rem;
   }
 }
 
@@ -33,9 +35,9 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   padding: 1rem;
+  background-color: $blue1;
+  color: $warmwhite;
 
-  background-color: $warmgreen;
-  color: $warmblack;
   border: none;
   font-size: 8pt;
 
@@ -51,8 +53,8 @@
 }
 
 .button-2:hover {
-  background-color: $blue1;
-  color: $warmwhite;
+  background-color: $warmgreen;
+  color: $warmblack;
 }
 .Button-Refresh {
   padding-right: 10px;
@@ -64,4 +66,73 @@
   @media only screen and (max-width: $bp-small) {
     font-size: 6pt;
   }
+}
+
+.MainAreaInstructions {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  height: 100%;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    // flex-direction: colu;
+    align-content: center;
+    align-items: center;
+
+    width: 90%;
+    min-height: 100%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    // flex-direction: row;
+    align-content: center;
+
+    width: 90%;
+    min-height: 100%;
+  }
+}
+
+.InstructionsHeader {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  padding: 1rem 1rem;
+  margin-top: 5rem;
+  color: $blue1;
+
+  align-self: flex-start;
+  margin-left: 10rem;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 15px;
+    margin-top: 2rem;
+    font-weight: 600;
+  }
+}
+
+.Instructions {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 1rem 1rem;
+  color: $blue1;
+
+  align-self: flex-start;
+  margin-left: 10rem;
+  text-decoration: none;
+  list-style: none;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
+  }
+}
+
+.InstructionItem {
+  text-decoration: none;
+  list-style: none;
+  padding: 6px 0;
 }

@@ -105,7 +105,25 @@ class App extends Component {
                     testParam={this.testParam}
                   />
                 ) : (
-                  <div className="MainArea"></div>
+                  <div className="MainAreaInstructions">
+                    <div className="InstructionsHeader">
+                      {" "}
+                      How to use this application:
+                    </div>
+                    <ul className="Instructions">
+                      <li className="InstructionItem">
+                        1. Add the names of who you'd like to compliment on the
+                        left
+                      </li>{" "}
+                      <li className="InstructionItem">
+                        2. Click the "Random Prompt" button to begin{" "}
+                      </li>
+                      <li className="InstructionItem">
+                        3. Friend names and the nice things you've said about
+                        them will be available in the dropdown menu{" "}
+                      </li>
+                    </ul>
+                  </div>
                 )
               }
             />
