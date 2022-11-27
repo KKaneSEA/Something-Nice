@@ -57,6 +57,7 @@
     align-items: center;
     align-self: center;
     height: 100%;
+    width: 20%;
   }
 }
 
@@ -106,10 +107,11 @@ h1 {
   padding-bottom: 1rem;
 
   @media only screen and (max-width: $bp-medium) {
-    font-size: 8px;
+    font-size: 10px;
     padding-left: 0;
     font-weight: 200;
     padding-top: 1rem;
+    width: 100%;
   }
 }
 
@@ -520,6 +522,12 @@ h1 {
   z-index: 1;
   border-radius: 10%;
   align-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 2rem;
+  }
 }
 
 /* Links inside the dropdown */
@@ -533,6 +541,13 @@ h1 {
   justify-self: center;
 
   align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5px 5px;
+    font-size: 10px;
+  }
 }
 
 /* Change color of dropdown links on hover */
