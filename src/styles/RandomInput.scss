@@ -70,6 +70,7 @@
   padding: 0px 10px;
   border: none;
   border-bottom: 1px solid black;
+  -webkit-appearance: none;
 
   @media only screen and (max-width: $bp-medium) {
     width: 30%;
