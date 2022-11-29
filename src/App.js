@@ -38,8 +38,6 @@ class App extends Component {
   }
 
   handleCompliment = (id, withNewCompliment) => {
-    console.log(id);
-
     let updatedList = this.state.friends.map((item) => {
       if (item.id == id) {
         return { ...item, compliments: withNewCompliment };
@@ -53,19 +51,14 @@ class App extends Component {
   testParam(id, compliment) {
     let requiredName = this.state.friends.filter((i) => i.id == id);
 
-    console.log(requiredName);
-    console.log(id, compliment);
     let nameState = requiredName[0];
     let complimentState = nameState.compliments;
     let withNewCompliment = [...complimentState, compliment];
     this.handleCompliment(id, withNewCompliment);
-
-    console.log(withNewCompliment);
   }
 
   render() {
     const properties = Object.keys(this.state.friends);
-    console.log(properties);
 
     const values = Object.values(this.state.friends);
 

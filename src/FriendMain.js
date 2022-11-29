@@ -26,8 +26,6 @@ export default class FriendMain extends Component {
       allItems = allComps[i];
     }
 
-    console.log(allItems);
-
     let niceCompliments = allItems.map((n) => (
       <h1 className="friendMain-compliments" key={n}>
         {n}
