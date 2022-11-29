@@ -57,10 +57,9 @@ export default class Sidebar extends Component {
     });
   }
   handleSubmit(evt) {
-    evt.preventDefault();
+    // evt.preventDefault();
     if (this.state.friendName.length > 1) this.props.addFriend(this.state);
     else alert("Input must be at least two characters.");
-    console.log(this.props.friendState);
 
     this.setState({ friendName: "", id: uuidv4(), compliments: [] });
   }
@@ -108,6 +107,14 @@ export default class Sidebar extends Component {
               name="friendName"
               onChange={this.handleChange}
               className="Sidebar-Input"
+              onKeyDown={(e) => {
+                let x = e.code;
+                if (x === "Enter") {
+                  console.log("enter submitted");
+
+                  this.handleSubmit();
+                }
+              }}
             ></input>
             <button
               className="Sidebar-Input-Button"

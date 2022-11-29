@@ -102,6 +102,23 @@ export default class StartingMain extends Component {
                 id="StartingMain-Input"
                 name="complimentLine"
                 className="RandomInput-Field"
+                onKeyDown={(e) => {
+                  let x = e.code;
+                  if (
+                    x === "Enter" &&
+                    document.getElementById("StartingMain-Input").value.length >
+                      1
+                  ) {
+                    console.log("enter");
+                    handleSubmit();
+
+                    this.changeTitle();
+
+                    this.props.testParam(getName.id, stateLine[0]);
+                  } else if (x === "Enter") {
+                    handleAlert();
+                  }
+                }}
               ></input>
             </div>
             <div className="MainArea-Buttons">
@@ -116,6 +133,7 @@ export default class StartingMain extends Component {
               </div>
               <NavLink to="/">
                 <button
+                  type="submit"
                   className="button-2"
                   onClick={(e) => {
                     if (
