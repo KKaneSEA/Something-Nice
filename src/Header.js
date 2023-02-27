@@ -1,7 +1,13 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import React, { Component, useRef } from "react";
 
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import {
+  useMatcapTexture,
+  Center,
+  Text3D,
+  OrbitControls,
+  useGLTF,
+} from "@react-three/drei";
 
 import { CameraShake } from "@react-three/drei";
 import "./styles/Header.scss";
@@ -96,16 +102,6 @@ function Model({ ...props }) {
   );
 }
 
-function HeaderText() {
-  return (
-    <mesh>
-      <boxBufferGeometry attach="geometry" />
-
-      <meshLambertMaterial attach="material" color="blue" />
-    </mesh>
-  );
-}
-
 export default class Header extends Component {
   render() {
     const config = {
@@ -120,6 +116,7 @@ export default class Header extends Component {
       decayRate: 9.65, // if decay = true this is the rate at which intensity will reduce at
       controls: undefined, // if using orbit controls, pass a ref here so we can update the rotation
     };
+
     return (
       <Canvas className="Header" camera={{ fov: 30, position: [0, 20, 35] }}>
         <CameraShake {...config} />
@@ -131,5 +128,3 @@ export default class Header extends Component {
     );
   }
 }
-
-export { HeaderText };

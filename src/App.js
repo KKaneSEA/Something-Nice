@@ -1,11 +1,12 @@
 import React, { Component, useState } from "react";
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
+import { Canvas } from "@react-three/fiber";
 
-import "./styles/App.scss";
 import "./styles/Body.scss";
 import "./styles/MainArea.scss";
 import "./styles/RandomInput.scss";
 import Header from "./Header";
+
 import Sidebar from "./Sidebar";
 
 import StartingMain from "./StartingMain";
@@ -105,8 +106,8 @@ class App extends Component {
                     </div>
                     <ul className="Instructions">
                       <li className="InstructionItem">
-                        1. Add the names of who you'd like to compliment on the
-                        left
+                        1. Add the names of who you'd like to compliment in the
+                        "add friends" box
                       </li>{" "}
                       <li className="InstructionItem">
                         2. Click the "Random Prompt" button to begin{" "}

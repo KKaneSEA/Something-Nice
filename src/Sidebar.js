@@ -11,8 +11,6 @@ import { HeaderText } from "./Header";
 import { v4 as uuidv4 } from "uuid";
 import Friends from "./Friends";
 import FriendsDropDown from "./FriendsDropDown";
-import MenuItem from "@mui/material/MenuItem";
-import MenuList from "@mui/material/MenuList";
 
 function Model({ ...props }) {
   const group = useRef();
@@ -65,32 +63,8 @@ export default class Sidebar extends Component {
   }
 
   render() {
-    const config = {
-      maxYaw: 1.6, // Max amount camera can yaw in either direction
-      maxPitch: 0.2, // Max amount camera can pitch in either direction
-      maxRoll: 0.6, // Max amount camera can roll in either direction
-      yawFrequency: 0.9, // Frequency of the the yaw rotation
-      pitchFrequency: 0.9, // Frequency of the pitch rotation
-      rollFrequency: 0.1, // Frequency of the roll rotation
-      intensity: 0.3, // initial intensity of the shake
-      decay: false, // should the intensity decay over time
-      decayRate: 0.65, // if decay = true this is the rate at which intensity will reduce at
-      controls: undefined, // if using orbit controls, pass a ref here so we can update the rotation
-    };
-
     return (
       <aside className="Sidebar">
-        {/* <Canvas
-          className="Sidebar-Container"
-          camera={{ fov: 29, position: [70, -3, 90] }}
-        >
-          <CameraShake {...config} />
-
-          <ambientLight intensity={3.5} color={"orange"} />
-          <spotLight position={[19, 15, 10]} angle={10.3} color={"white"} />
-          <Model />
-        </Canvas> */}
-
         <div className="Siderbar-Container">
           <div className="Sidebar-Home">
             <NavLink to="/" className="buttonPromptLink">
@@ -110,8 +84,6 @@ export default class Sidebar extends Component {
               onKeyDown={(e) => {
                 let x = e.code;
                 if (x === "Enter") {
-                  console.log("enter submitted");
-
                   this.handleSubmit();
                 }
               }}
