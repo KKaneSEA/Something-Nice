@@ -81,7 +81,7 @@
     align-content: center;
     align-items: center;
 
-    width: 90%;
+    // width: 90%;
     min-height: 100%;
   }
 
@@ -90,7 +90,7 @@
     // flex-direction: row;
     align-content: center;
 
-    width: 90%;
+    // width: 90%;
     min-height: 100%;
   }
 }
@@ -105,10 +105,15 @@
 
   align-self: flex-start;
   margin-left: 10rem;
+
   @media only screen and (max-width: $bp-medium) {
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 2rem;
     font-weight: 600;
+    padding: 0;
+    margin-left: 0;
+    padding-bottom: 2rem;
+    align-self: center;
   }
 }
 
@@ -123,11 +128,14 @@
   margin-left: 10rem;
   text-decoration: none;
   list-style: none;
+
   @media only screen and (max-width: $bp-medium) {
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    padding: 0rem 1rem;
+    padding: 0rem 10rem;
+    margin-left: 0;
+    align-self: center;
   }
 }
 

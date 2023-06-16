@@ -9,15 +9,14 @@ $warmblack: #525252;
 $lighterblack: #252422;
 $soft: #fbc770;
 $warmwhite: #f7f7f2;
-$blue1: #036474;
+$blue1: #04649e;
 $greytext: #f0f0f0;
 $greybackground: #f9f9f9;
 $warmgreen: #d3e37b;
 
 .Body {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  height: 80vh;
+  grid-template-columns: 2fr 5fr;
 
   @media only screen and (max-width: $bp-medium) {
     display: flex;

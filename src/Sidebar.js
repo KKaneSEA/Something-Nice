@@ -98,18 +98,23 @@ export default class Sidebar extends Component {
 
           <div className="Sidebar-Friends">
             <div className="Friends-Container">
-              <h1 className="Friends-Heading">
+              <h2 className="Friends-Heading">
                 {this.props.friendState.length > 0 ? "Friends" : ""}
-              </h1>
-              <div className="AddFriends-Container">
-                {this.props.friendState.length > 0 ? (
-                  <FriendsDropDown friendList={this.props.friendState} />
-                ) : (
-                  <h1 className="AddFriends-Text">Add some friends!</h1>
-                )}
-              </div>
+              </h2>
 
-              <div></div>
+              <div className="AddFriends-Container">
+                <div>
+                  {
+                    this.props.friendState.length > 0 ? (
+                      <FriendsDropDown friendList={this.props.friendState} />
+                    ) : (
+                      ""
+                    )
+
+                    // <h1 className="AddFriends-Text">Add some friends!</h1>
+                  }
+                </div>
+              </div>
             </div>
           </div>
         </div>
