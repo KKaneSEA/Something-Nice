@@ -122,37 +122,37 @@ export default class StartingMain extends Component {
               ></input>
             </div>
             <div className="MainArea-Buttons">
-              <div className="Button-Refresh">
-                <button
-                  className="button-2"
-                  onClick={handleRefresh}
-                  onClick={this.changeTitle}
-                >
-                  Refresh
-                </button>
-              </div>
-              <NavLink to="/">
-                <button
-                  type="submit"
-                  className="button-2"
-                  onClick={(e) => {
-                    if (
-                      document.getElementById("StartingMain-Input").value
-                        .length > 1
-                    ) {
-                      handleSubmit();
+              {/* <div className="Button-Refresh"> */}
+              <button
+                className="button-2"
+                onClick={handleRefresh}
+                onClick={this.changeTitle}
+              >
+                Refresh
+              </button>
+              {/* </div> */}
+              {/* <NavLink to="/"> */}
+              <button
+                type="submit"
+                className="button-2"
+                onClick={(e) => {
+                  if (
+                    document.getElementById("StartingMain-Input").value.length >
+                    1
+                  ) {
+                    handleSubmit();
 
-                      this.changeTitle();
+                    this.changeTitle();
 
-                      this.props.testParam(getName.id, stateLine[0]);
-                    } else {
-                      handleAlert();
-                    }
-                  }}
-                >
-                  Submit
-                </button>
-              </NavLink>
+                    this.props.testParam(getName.id, stateLine[0]);
+                  } else {
+                    handleAlert();
+                  }
+                }}
+              >
+                Submit
+              </button>
+              {/* </NavLink> */}
             </div>
           </div>
         </div>

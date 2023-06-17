@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { CameraShake } from "@react-three/drei";
 
 import "./styles/Sidebar.scss";
-import { NavLink, Link } from "react-router-dom";
+import { useNavigate, NavLink, Link } from "react-router-dom";
 
 import { HeaderText } from "./Header";
 import { v4 as uuidv4 } from "uuid";
@@ -69,7 +69,8 @@ export default class Sidebar extends Component {
           <div className="Sidebar-Home">
             <NavLink to="/" className="buttonPromptLink">
               {" "}
-              <button className="buttonPrompt">Random Prompt</button>{" "}
+              Random Prompt
+              {/* <button className="buttonPrompt">Random Prompt</button>{" "} */}
             </NavLink>
           </div>
           <div className="Sidebar-Add-Container">
